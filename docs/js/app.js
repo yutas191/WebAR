@@ -33,7 +33,7 @@ source.init(function onReady() {                      // ƒ\[ƒX‚ğ‰Šú‰»‚µA€”õ‚
 //===================================================================
 var context = new THREEx.ArToolkitContext({           // arToolkitContext‚Ìì¬
   debug: false,                                       // ƒfƒoƒbƒO—pƒLƒƒƒ“ƒoƒX•\¦iƒfƒtƒHƒ‹ƒgfalsej
-  cameraParametersUrl: "camera_para.dat",             // ƒJƒƒ‰ƒpƒ‰ƒ[ƒ^ƒtƒ@ƒCƒ‹
+  cameraParametersUrl: "./data/camera_para.dat",             // ƒJƒƒ‰ƒpƒ‰ƒ[ƒ^ƒtƒ@ƒCƒ‹
   detectionMode: "mono",                              // ŒŸoƒ‚[ƒhicolor/color_and_matrix/mono/mono_and_matrixj
   imageSmoothingEnabled: true,                        // ‰æ‘œ‚ğƒXƒ€[ƒWƒ“ƒO‚·‚é‚©iƒfƒtƒHƒ‹ƒgfalsej
   maxDetectionRate: 60,                               // ƒ}[ƒJ‚ÌŒŸoƒŒ[ƒgiƒfƒtƒHƒ‹ƒg60j
@@ -71,7 +71,7 @@ function onResize(){
 var marker1 = new THREE.Group();                      // ƒ}[ƒJ‚ğƒOƒ‹[ƒv‚Æ‚µ‚Äì¬
 var controls = new THREEx.ArMarkerControls(context, marker1, {    // ƒ}[ƒJ‚ğ“o˜^
   type: "pattern",                                    // ƒ}[ƒJ‚Ìƒ^ƒCƒv
-  patternUrl: "./patt/hiro.patt",                            // ƒ}[ƒJƒtƒ@ƒCƒ‹
+  patternUrl: "./data/hiro.patt",                            // ƒ}[ƒJƒtƒ@ƒCƒ‹
 });
 scene.add(marker1);                                   // ƒ}[ƒJ‚ğƒV[ƒ“‚É’Ç‰Á
 // ƒ‚ƒfƒ‹iƒƒbƒVƒ…j
@@ -100,7 +100,7 @@ marker1.add(cloak.object3d);                          // cloak‚ğƒ}[ƒJ‚É’Ç‰Á
 var marker2 = new THREE.Group();                      // ƒ}[ƒJ‚ğƒOƒ‹[ƒv‚Æ‚µ‚Äì¬
 var controls = new THREEx.ArMarkerControls(context, marker2, {    // ƒ}[ƒJ‚ğ“o˜^
   type: "pattern",                                    // ƒ}[ƒJ‚Ìƒ^ƒCƒv
-  patternUrl: "./patt/kanji.patt",                           // ƒ}[ƒJƒtƒ@ƒCƒ‹
+  patternUrl: "./data/kanji.patt",                           // ƒ}[ƒJƒtƒ@ƒCƒ‹
 });
 scene.add(marker2);                                   // ƒ}[ƒJ‚ğƒV[ƒ“‚É’Ç‰Á
 // ƒ‚ƒfƒ‹iƒƒbƒVƒ…j
