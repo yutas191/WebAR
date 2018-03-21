@@ -78,7 +78,7 @@ scene.add(marker1);                                   // マーカをシーンに追加
 var geo = new THREE.CubeGeometry(1, 1, 1);            // cube ジオメトリ（サイズは 1x1x1）
 var mat = new THREE.MeshNormalMaterial({              // マテリアルの作成
   transparent: true,                                  // 透過
-  opacity: 0.5,                                       // 不透明度
+  opacity: 1.0,                                       // 不透明度
   side: THREE.DoubleSide,                             // 内側も描く
 });
 var mesh1 = new THREE.Mesh(geo, mat);                 // メッシュを生成
@@ -106,17 +106,17 @@ scene.add(marker2);                                   // マーカをシーンに追加
 // モデル（メッシュ）
 var mesh2;                                            // モデルを入れる箱
 var loader = new THREE.JSONLoader();                  // json形式のモデルを読み込むローダ
-//loader.load("./model/ICOSphere.json", function(geo, mat) {       // モデルを読み込む
+loader.load("./model/ICOSphere.json", function(geo, mat) {       // モデルを読み込む
   // Processing のサンプルに付属の rocket.obj を Blender で json形式にエクスポートして自作
   // rocket.obj, rocket.mtl, rocket.png を以下から DL
   // https://github.com/processing/processing-android/tree/master/examples/Basics/Shape/LoadDisplayOBJ/data
   // Blender 用のエクスポータは Three.js の utils/exporters/addons/io_three に有り
-//  mesh2 = new THREE.Mesh(geo, mat[0]);                // メッシュ化
-//  mesh2.name = "rocket";                              // メッシュの名前（後でピッキングで使う）
-//  mesh2.scale.set(0.5, 0.5, 0.5);                     // 初期サイズ（現物合わせ）
-//  mesh2.position.set(0, 0.5, 0);                      // 初期位置（現物合わせ）
-//  marker2.add(mesh2);                                 // メッシュをマーカに追加
-//});
+  mesh2 = new THREE.Mesh(geo, mat[0]);                // メッシュ化
+  mesh2.name = "rocket";                              // メッシュの名前（後でピッキングで使う）
+  mesh2.scale.set(0.5, 0.5, 0.5);                     // 初期サイズ（現物合わせ）
+  mesh2.position.set(0, 0.5, 0);                      // 初期位置（現物合わせ）
+  marker2.add(mesh2);                                 // メッシュをマーカに追加
+});
 // マーカ隠蔽（cloaking）
 var videoTex = new THREE.VideoTexture(source.domElement);  // 映像をテクスチャとして取得
 videoTex.minFilter = THREE.NearestFilter;             // 映像テクスチャのフィルタ処理？
