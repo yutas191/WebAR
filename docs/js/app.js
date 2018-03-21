@@ -71,7 +71,7 @@ function onResize(){
 var marker1 = new THREE.Group();                      // マーカをグループとして作成
 var controls = new THREEx.ArMarkerControls(context, marker1, {    // マーカを登録
   type: "pattern",                                    // マーカのタイプ
-  patternUrl: "./data/hiro.patt",                            // マーカファイル
+  patternUrl: "./data/kanji.patt",                            // マーカファイル
 });
 scene.add(marker1);                                   // マーカをシーンに追加
 // モデル（メッシュ）
@@ -100,7 +100,7 @@ marker1.add(cloak.object3d);                          // cloakをマーカに追加
 var marker2 = new THREE.Group();                      // マーカをグループとして作成
 var controls = new THREEx.ArMarkerControls(context, marker2, {    // マーカを登録
   type: "pattern",                                    // マーカのタイプ
-  patternUrl: "./data/kanji.patt",                           // マーカファイル
+  patternUrl: "./data/hiro.patt",                           // マーカファイル
 });
 scene.add(marker2);                                   // マーカをシーンに追加
 // モデル（メッシュ）
