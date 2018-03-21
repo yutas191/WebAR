@@ -106,7 +106,7 @@ scene.add(marker2);                                   // マーカをシーンに追加
 // モデル（メッシュ）
 var mesh2;                                            // モデルを入れる箱
 var loader = new THREE.JSONLoader();                  // json形式のモデルを読み込むローダ
-loader.load("./model/ICOSphere.json", function(geo, mat) {       // モデルを読み込む
+loader.load("./model/rocket.json", function(geo, mat) {       // モデルを読み込む
   // Processing のサンプルに付属の rocket.obj を Blender で json形式にエクスポートして自作
   // rocket.obj, rocket.mtl, rocket.png を以下から DL
   // https://github.com/processing/processing-android/tree/master/examples/Basics/Shape/LoadDisplayOBJ/data
