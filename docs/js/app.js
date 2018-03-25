@@ -220,7 +220,7 @@ function picked(objName) {
       tween1();                                       // cubeのアニメーションを実行
       break;
     case "rocket":                                    // rocketなら
-      tween2();                                       // rocketのアニメーションを実行
+      tween1();                                       // rocketのアニメーションを実行
       break;
     default:
       break;
