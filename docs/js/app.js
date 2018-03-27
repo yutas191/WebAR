@@ -178,7 +178,7 @@ function tween2() {                                   // us‚«v‚ÌƒAƒjƒ[ƒVƒ‡ƒ
   .onComplete(function() {                            // ƒAƒjƒ[ƒVƒ‡ƒ“Š®—¹‚Ìˆ—
     tween2_back();                                    // u‹A‚èv‚ÌƒAƒjƒ[ƒVƒ‡ƒ“‚ğÀs
   })
-  .delay(0)                                           // ŠJn‚Ü‚Å‚Ì’x‰„ŠÔ
+  .delay(5000)                                        // ŠJn‚Ü‚Å‚Ì’x‰„ŠÔ
   .start();                                           // tweenƒAƒjƒ[ƒVƒ‡ƒ“ŠJn
 }
 function tween2_back() {                              // u‹A‚èv‚ÌƒAƒjƒ[ƒVƒ‡ƒ“
@@ -192,7 +192,7 @@ function tween2_back() {                              // u‹A‚èv‚ÌƒAƒjƒ[ƒVƒ‡ƒ
   .onComplete(function() {
     // ‚È‚É‚à‚µ‚È‚¢
   })
-  .delay(5000)
+  .delay(0)
   .start();
 }
 
