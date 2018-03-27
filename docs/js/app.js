@@ -192,7 +192,7 @@ function tween2_back() {                              // u‹A‚èv‚ÌƒAƒjƒ[ƒVƒ‡ƒ
   .onComplete(function() {
     // ‚È‚É‚à‚µ‚È‚¢
   })
-  .delay(100)
+  .delay(5000)
   .start();
 }
 
