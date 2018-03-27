@@ -113,7 +113,7 @@ loader.load("./model/rocket.json", function(geo, mat) {       // ƒ‚ƒfƒ‹‚ğ“Ç‚İ‚
   // Blender —p‚ÌƒGƒNƒXƒ|[ƒ^‚Í Three.js ‚Ì utils/exporters/addons/io_three ‚É—L‚è
   mesh2 = new THREE.Mesh(geo, mat[0]);                // ƒƒbƒVƒ…‰»
   mesh2.name = "rocket";                              // ƒƒbƒVƒ…‚Ì–¼‘OiŒã‚ÅƒsƒbƒLƒ“ƒO‚Åg‚¤j
-  mesh2.scale.set(0.4, 0.4, 0.4);                     // ‰ŠúƒTƒCƒYiŒ»•¨‡‚í‚¹j
+  mesh2.scale.set(0.2, 0.2, 0.2);                     // ‰ŠúƒTƒCƒYiŒ»•¨‡‚í‚¹j
   mesh2.position.set(0, 0.5, 0);                      // ‰ŠúˆÊ’uiŒ»•¨‡‚í‚¹j
   marker2.add(mesh2);                                 // ƒƒbƒVƒ…‚ğƒ}[ƒJ‚É’Ç‰Á
 });
