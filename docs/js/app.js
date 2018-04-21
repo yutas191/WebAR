@@ -164,9 +164,9 @@ function tween1_back() {                              // u‹A‚èv‚ÌƒAƒjƒ[ƒVƒ‡ƒ
 //-------------------------------
 // mesh2 ‚É‚Â‚¢‚Äirocket‚ª”ò‚Ôj
 //-------------------------------
-var twIni2 = {posY: 0.5, rotY: 0};                    // ‰Šúƒpƒ‰ƒ[ƒ^
-var twVal2 = {posY: 0.5, rotY: 0};                    // tween‚É‚æ‚Á‚ÄXV‚³‚ê‚éƒpƒ‰ƒ[ƒ^
-var twFor2 = {posY: 5, rotY: 2*Math.PI};              // ƒ^[ƒQƒbƒgƒpƒ‰ƒ[ƒ^
+var twIni2 = {posY: 0.5, rotY: -0.5};                 // ‰Šúƒpƒ‰ƒ[ƒ^
+var twVal2 = {posY: 0.5, rotY: -0.5};                 // tween‚É‚æ‚Á‚ÄXV‚³‚ê‚éƒpƒ‰ƒ[ƒ^
+var twFor2 = {posY: 2, rotY: 2*Math.PI};              // ƒ^[ƒQƒbƒgƒpƒ‰ƒ[ƒ^
 function tween2() {                                   // us‚«v‚ÌƒAƒjƒ[ƒVƒ‡ƒ“
   var tween = new TWEEN.Tween(twVal2)                 // tweenƒIƒuƒWƒFƒNƒg‚ðì¬
   .to(twFor2, 2000)                                   // ƒ^[ƒQƒbƒg‚Æ“ž’BŽžŠÔ
