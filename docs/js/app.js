@@ -83,7 +83,7 @@ var mat = new THREE.MeshNormalMaterial({              // ƒ}ƒeƒŠƒAƒ‹‚Ìì¬
 });
 var mesh1 = new THREE.Mesh(geo, mat);                 // ƒƒbƒVƒ…‚ğ¶¬
 mesh1.name = "cube";                                  // ƒƒbƒVƒ…‚Ì–¼‘OiŒã‚ÅƒsƒbƒLƒ“ƒO‚Åg‚¤j
-mesh1.position.set(0, 0.5, 0);                        // ‰ŠúˆÊ’u
+mesh1.position.set(0, 0.5, 5);                        // ‰ŠúˆÊ’u
 marker1.add(mesh1);                                   // ƒƒbƒVƒ…‚ğƒ}[ƒJ‚É’Ç‰Á
 // ƒ}[ƒJ‰B•Áicloakingj
 var videoTex = new THREE.VideoTexture(source.domElement);  // ‰f‘œ‚ğƒeƒNƒXƒ`ƒƒ‚Æ‚µ‚Äæ“¾
@@ -107,10 +107,6 @@ scene.add(marker2);                                   // ƒ}[ƒJ‚ğƒV[ƒ“‚É’Ç‰Á
 var mesh2;                                            // ƒ‚ƒfƒ‹‚ğ“ü‚ê‚é” 
 var loader = new THREE.JSONLoader();                  // jsonŒ`®‚Ìƒ‚ƒfƒ‹‚ğ“Ç‚İ‚Şƒ[ƒ_
 loader.load("./model/rocket.json", function(geo, mat) {       // ƒ‚ƒfƒ‹‚ğ“Ç‚İ‚Ş
-  // Processing ‚ÌƒTƒ“ƒvƒ‹‚É•t‘®‚Ì rocket.obj ‚ğ Blender ‚Å jsonŒ`®‚ÉƒGƒNƒXƒ|[ƒg‚µ‚Ä©ì
-  // rocket.obj, rocket.mtl, rocket.png ‚ğˆÈ‰º‚©‚ç DL
-  // https://github.com/processing/processing-android/tree/master/examples/Basics/Shape/LoadDisplayOBJ/data
-  // Blender —p‚ÌƒGƒNƒXƒ|[ƒ^‚Í Three.js ‚Ì utils/exporters/addons/io_three ‚É—L‚è
   mesh2 = new THREE.Mesh(geo, mat[0]);                // ƒƒbƒVƒ…‰»
   mesh2.name = "rocket";                              // ƒƒbƒVƒ…‚Ì–¼‘OiŒã‚ÅƒsƒbƒLƒ“ƒO‚Åg‚¤j
   mesh2.scale.set(0.2, 0.2, 0.2);                     // ‰ŠúƒTƒCƒYiŒ»•¨‡‚í‚¹j
@@ -197,7 +193,7 @@ function tween2_back() {                              // u‹A‚èv‚ÌƒAƒjƒ[ƒVƒ‡ƒ
 }
 
 //===================================================================
-// ƒ}ƒEƒXƒ_ƒEƒ“iƒ^ƒbƒvj‚É‚æ‚éƒsƒbƒLƒ“ƒOˆ—
+// ƒ}ƒEƒXƒ_ƒEƒ“ˆ—
 //===================================================================
 window.addEventListener("mousedown", function(ret) {
   var mouseX = ret.clientX;                           // ƒ}ƒEƒX‚ÌxÀ•W
@@ -210,11 +206,11 @@ window.addEventListener("mousedown", function(ret) {
   var ray = new THREE.Raycaster(camera.position, pos.sub(camera.position).normalize());
   var obj = ray.intersectObjects(scene.children, true);   // ƒŒƒC‚ÆŒğ·‚µ‚½ƒIƒuƒWƒFƒNƒg‚Ìæ“¾
   if(obj.length > 0) {                                // Œğ·‚µ‚½ƒIƒuƒWƒFƒNƒg‚ª‚ ‚ê‚Î
-    picked(obj[0].object.name);                       // ƒsƒbƒN‚³‚ê‚½‘ÎÛ‚É‰‚¶‚½ˆ—‚ğÀs
+    touch(obj[0].object.name);                       // ƒ^ƒbƒ`‚³‚ê‚½‘ÎÛ‚É‰‚¶‚½ˆ—‚ğÀs
   }
 });
-// ƒsƒbƒN‚³‚ê‚½‘ÎÛ‚É‰‚¶‚½ˆ—
-function picked(objName) {
+// ƒ^ƒbƒ`‚³‚ê‚½‘ÎÛ‚É‰‚¶‚½ˆ—
+function touch(objName) {
   switch(objName) {
     case "cube":                                      // cube‚È‚ç
       tween1();                                       // cube‚ÌƒAƒjƒ[ƒVƒ‡ƒ“‚ğÀs
