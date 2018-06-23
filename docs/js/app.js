@@ -17,12 +17,14 @@ scene.add(camera);                                    // カメラをシーンに追加
 var light = new THREE.DirectionalLight(0xffffff);     // 平行光源（白）を作成
 light.position.set(0, 0, 2);                          // カメラ方向から照らす
 scene.add(light);                                     // シーンに光源を追加
+var ambientlight = new THREE.AmbientLight(0x888888);
+scene.add(ambientlight);
 
 //===================================================================
 // arToolkitSource（マーカトラッキングするメディアソース）
 //===================================================================
 var source = new THREEx.ArToolkitSource({             // arToolkitSourceの作成
-  sourceType: "webcam",                               // Webカメラを使う（スマホもこれでOK）
+  sourceType: "webcam",                               // Webカメラ設定
 });
 source.init(function onReady() {                      // ソースを初期化し、準備ができたら
   onResize();                                         // リサイズ処理
@@ -63,11 +65,9 @@ function onResize(){
 // ArMarkerControls（マーカと、マーカ検出時の表示オブジェクト）
 //===================================================================
 //-------------------------------
-// その１（hiroマーカ＋立方体）
+// その１（kanjiマーカ＋立方体）
 //-------------------------------
 // マーカ
-// ネットでhiroマーカの画像を得て、以下の AR.js のマーカトレーニングサイトで patt を作成
-// https://jeromeetienne.github.io/AR.js/three.js/examples/marker-training/examples/generator.html
 var marker1 = new THREE.Group();                      // マーカをグループとして作成
 var controls = new THREEx.ArMarkerControls(context, marker1, {    // マーカを登録
   type: "pattern",                                    // マーカのタイプ
@@ -92,11 +92,9 @@ var cloak = new THREEx.ArMarkerCloak(videoTex);       // マーカ隠蔽(cloak)オブジ
 cloak.object3d.material.uniforms.opacity.value = 1.0; // cloakの不透明度
 marker1.add(cloak.object3d);                          // cloakをマーカに追加
 //-------------------------------
-// その２（kanjiマーカ＋.json）
+// その２（hiroマーカ＋.json）
 //-------------------------------
 // マーカ
-// ネットでkanjiマーカの画像を得て、以下の AR.js のマーカトレーニングサイトで patt を作成
-// https://jeromeetienne.github.io/AR.js/three.js/examples/marker-training/examples/generator.html
 var marker2 = new THREE.Group();                      // マーカをグループとして作成
 var controls = new THREEx.ArMarkerControls(context, marker2, {    // マーカを登録
   type: "pattern",                                    // マーカのタイプ
